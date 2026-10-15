@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Interior Centre</title>
+<meta name="description" content="How the Interior Centre website handles your information: the WhatsApp contact form, optional analytics, Google Fonts and your choices.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#32281F">
+<link rel="canonical" href="https://interior-center.vercel.app/privacy.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="ga-measurement-id" content="G-XXXXXXXXXX">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..500&family=Jost:wght@400..500&display=swap" rel="stylesheet">
+<style>
+/* ==SHARED-START== */
+  :root{
+    color-scheme:light;
+
+    /* surfaces */
+    --paper:#F4F0E8;            /* warm ivory */
+    --paper-raised:#FAF8F3;     /* lifted surfaces: form, banner */
+    --paper-sunk:#ECE5D8;       /* sand bands */
+    --walnut:#32281F;           /* dark bands: closing call-to-action + footer (walnut, not black) */
+    --walnut-deep:#261E17;
+
+    /* ink */
+    --ink:#1F1C18;              /* charcoal */
+    --ink-soft:#554E42;         /* body copy        7.2:1 on paper */
+    --ink-faint:#6C6455;        /* captions, meta   5.1:1 on paper */
+    --on-walnut:#EFE9DC;
+    --on-walnut-soft:rgba(239,233,220,.74);
+    --on-walnut-faint:rgba(239,233,220,.58);
+
+    /* lines */
+    --line:#DDD5C6;             /* hairline */
+    --line-strong:#BDB29C;
+    --field:#867C68;            /* form-control edges, 3.6:1 */
+    --line-on-walnut:rgba(239,233,220,.16);
+
+    /* accent: muted bronze (names kept for the line-art markup) */
+    --clay:#8B6A3F;             /* ornament only */
+    --clay-deep:#6F5230;        /* text & links     6.3:1 on paper */
+    --clay-tint:139,106,63;
+    --amber:#D6B67F;            /* the same bronze, lit for dark surfaces (hero, header, walnut bands) */
+
+    --focus:#1F1C18;
+    --danger:#9B3A2E;
+    --ok:#3F5B45;
+
+    /* shape: crisp edges everywhere */
+    --radius:0px; --r-lg:0px; --r-md:0px; --r-sm:0px; --r-pill:0px;
+
+    /* depth: restrained */
+    --shadow-tint:31,28,24;
+    --shadow-sm:0 1px 2px rgba(var(--shadow-tint),.05), 0 8px 20px -14px rgba(var(--shadow-tint),.16);
+    --shadow-md:0 1px 2px rgba(var(--shadow-tint),.05), 0 18px 40px -24px rgba(var(--shadow-tint),.24);
+    --shadow-lg:0 2px 4px rgba(var(--shadow-tint),.05), 0 28px 60px -28px rgba(var(--shadow-tint),.32);
+    --glass-bg:var(--paper-raised);
+    --glass-bg-strong:var(--paper-raised);
+    --glass-border:var(--line);
+
+    /* matte grain (inline SVG noise, tiled) */
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.28 0 0 0 0 0.22 0 0 0 0 0.15 0 0 0 0.26 -0.105'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --grain-dark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.93 0 0 0 0 0.88 0 0 0 0 0.78 0 0 0 0.19 -0.08'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --veil:linear-gradient(rgba(124,94,58,.08),rgba(124,94,58,.08));
+    --chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236C6455' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 6l4.5 4.5L12.5 6'/%3E%3C/svg%3E");
+
+    /* type */
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+    /* layout */
+    --wrap:1280px;
+    --gutter:clamp(20px,5vw,64px);
+    --col-gap:clamp(20px,2.4vw,36px);
+    --sec-y:clamp(72px,8.4vw,128px);
+    --nav-h:68px;
+  }
+  @media (min-width:960px){ :root{ --nav-h:80px; } }
+  @media (min-width:1700px){ :root{ --wrap:1440px; } }
+
+    body{ background-image:var(--grain); }
+  header.site-nav,
+  .mobile-panel,
+  .final-cta,
+  footer{ background-image:var(--grain-dark); }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 12px); -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+  @media (min-width:1600px){ html{ font-size:106.25%; } }
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+  }
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-size:240px 240px;
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    font-size:1rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  p{ margin:0; text-wrap:pretty; }
+  .wrap{ width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter); }
+  .sr-only{ position:absolute !important; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; border:0; }
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:300;
+    line-height:1.08;
+    letter-spacing:-.018em;
+    margin:0;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+  h2{ font-size:clamp(2.2rem,1.4rem + 2.6vw,3.6rem); }
+  h3{ font-size:1.5rem; line-height:1.2; font-weight:400; letter-spacing:-.008em; }
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:.95rem;
+    font-weight:500;
+    line-height:1.5;
+    letter-spacing:.02em;
+    color:var(--clay-deep);
+  }
+
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:3px; }
+  ::selection{ background:var(--clay-deep); color:var(--paper-raised); }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.9em;
+    min-height:54px; padding:0 2rem;
+    font-family:var(--sans); font-size:.97rem; font-weight:500; line-height:1.2;
+    letter-spacing:.02em; text-align:center;
+    border:1px solid transparent; border-radius:0;
+    cursor:pointer; text-decoration:none;
+    transition:background-color .35s ease, color .35s ease, border-color .35s ease;
+  }
+  .btn-primary{ background:var(--ink); color:var(--paper-raised); border-color:var(--ink); }
+  .btn-primary:hover{ background:var(--clay-deep); border-color:var(--clay-deep); color:var(--paper-raised); }
+  .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--field); border-color:color-mix(in srgb,var(--ink) 45%,transparent); }
+  .btn-ghost:hover{ background:var(--ink); border-color:var(--ink); color:var(--paper-raised); }
+  .btn-line{
+    min-height:44px; padding:0; background:transparent; color:var(--clay-deep);
+    border:0; border-bottom:1px solid currentColor; letter-spacing:.02em;
+  }
+  .btn-line:hover{ color:var(--ink); }
+  .btn[disabled]{ opacity:.55; cursor:not-allowed; }
+
+  /* ---------- Navigation ---------- */
+  header.site-nav{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
+    background-color:var(--walnut-deep);
+    background-size:240px 240px;
+    border-bottom:1px solid var(--line-on-walnut);
+    color:var(--on-walnut); --focus:#F8F4EA;
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    height:var(--nav-h); max-width:var(--wrap); margin:0 auto; padding:0 var(--gutter);
+  }
+  .brand{
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    text-decoration:none; color:var(--on-walnut); line-height:1; min-width:0; min-height:44px;
+  }
+  .brand-name{ font-family:var(--serif); font-size:1.7rem; font-weight:400; letter-spacing:-.005em; line-height:.95; white-space:nowrap; }
+  .brand small{ display:none; font-family:var(--sans); font-size:.74rem; font-weight:400; letter-spacing:.04em; color:var(--on-walnut-soft); white-space:nowrap; }
+  @media (min-width:640px){ .brand small{ display:block; } }
+  @media (min-width:960px) and (max-width:1279px){ .brand small{ display:none; } }
+
+  .nav-links{ display:none; list-style:none; margin:0; padding:0; gap:clamp(22px,2.4vw,40px); }
+  .nav-links a{
+    position:relative; display:inline-block; padding:10px 0;
+    text-decoration:none; font-size:.97rem; font-weight:400; letter-spacing:.01em;
+    color:var(--on-walnut-soft); transition:color .25s ease;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; right:0; bottom:4px; height:1px;
+    background:var(--amber); transform:scaleX(0); transform-origin:left; transition:transform .4s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav-links a:hover{ color:#F8F4EA; }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after{ transform:scaleX(1); }
+
+  .nav-cta{ display:flex; align-items:center; gap:10px; }
+  .nav-call{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    min-width:44px; min-height:44px; padding:0;
+    text-decoration:none; color:var(--on-walnut); border:1px solid rgba(239,233,220,.38);
+    font-size:.95rem; font-weight:500; letter-spacing:.03em; white-space:nowrap;
+    transition:background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .nav-call svg{ width:17px; height:17px; flex:none; }
+  .nav-call .call-text{ position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .nav-call:hover{ background:var(--on-walnut); border-color:var(--on-walnut); color:var(--walnut-deep); }
+
+  .hamburger{
+    position:relative; width:44px; height:44px; padding:0; background:none; border:0; cursor:pointer; color:var(--on-walnut);
+  }
+  .hamburger span{
+    position:absolute; left:11px; width:22px; height:1.5px; background:currentColor;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1), top .35s cubic-bezier(.2,.7,.2,1), opacity .2s ease;
+  }
+  .hamburger span:nth-child(1){ top:16px; }
+  .hamburger span:nth-child(2){ opacity:0; top:22px; }
+  .hamburger span:nth-child(3){ top:28px; }
+  header.site-nav.open .hamburger span:nth-child(1){ top:22px; transform:rotate(45deg); }
+  header.site-nav.open .hamburger span:nth-child(3){ top:22px; transform:rotate(-45deg); }
+
+  .mobile-panel{
+    display:none; position:absolute; top:100%; left:0; right:0;
+    flex-direction:column;
+    max-height:calc(100vh - var(--nav-h)); max-height:calc(100svh - var(--nav-h)); overflow-y:auto;
+    padding:8px var(--gutter) 28px;
+    background-color:var(--walnut-deep); background-size:240px 240px;
+    border-bottom:1px solid var(--line-on-walnut);
+    box-shadow:0 24px 48px -24px rgba(0,0,0,.5);
+  }
+  header.site-nav.open .mobile-panel{ display:flex; animation:panelIn .35s cubic-bezier(.2,.7,.2,1); }
+  .mobile-panel a{
+    display:block; padding:16px 0; text-decoration:none; color:var(--on-walnut);
+    font-family:var(--serif); font-size:2rem; font-weight:300; line-height:1.1;
+    border-bottom:1px solid var(--line-on-walnut);
+  }
+  .mobile-panel a.mp-call{
+    margin-top:22px; padding:16px 0; border:1px solid rgba(239,233,220,.5); text-align:center;
+    font-family:var(--sans); font-size:1rem; font-weight:500; letter-spacing:.02em; color:var(--on-walnut);
+  }
+  @keyframes panelIn{ from{ opacity:0; transform:translateY(-8px); } to{ opacity:1; transform:none; } }
+
+  @media (min-width:960px){
+    .nav-inner{ display:grid; grid-template-columns:1fr auto 1fr; }
+    .nav-links{ display:flex; }
+    .hamburger, .mobile-panel{ display:none !important; }
+    .nav-cta{ justify-self:end; }
+  }
+  @media (min-width:960px) and (max-width:1099px){
+    .nav-links{ gap:18px; }
+    .nav-links a{ font-size:.92rem; }
+  }
+  @media (min-width:1100px){
+    .nav-call{ padding:0 20px; }
+    .nav-call svg{ display:none; }
+    .nav-call .call-text{ position:static; width:auto; height:auto; margin:0; overflow:visible; clip-path:none; }
+  }
+
+  .skip-link{
+    position:fixed; top:-80px; left:16px; z-index:2000;
+    background:var(--ink); color:var(--paper-raised);
+    padding:14px 22px; text-decoration:none;
+    font-size:.95rem; font-weight:500; letter-spacing:.02em;
+    transition:top .2s ease;
+  }
+  .skip-link:focus{ top:16px; }
+
+  /* ---------- Closing band + footer (walnut) ---------- */
+  .final-cta, footer{
+    background-color:var(--walnut);
+    background-size:240px 240px;
+    color:var(--on-walnut);
+    --focus:#EFE9DC;
+  }
+  .final-cta{ padding:clamp(80px,9vw,136px) 0 clamp(72px,8vw,112px); }
+  .final-cta-inner{
+    display:grid; gap:36px; align-items:end; grid-template-columns:minmax(0,1fr);
+  }
+  .final-cta-inner h2{ color:var(--on-walnut); font-size:clamp(2.5rem,1.4rem + 3.8vw,4.9rem); font-weight:300; line-height:1.03; letter-spacing:-.025em; max-width:14ch; }
+  .final-cta-inner p{ color:var(--on-walnut-soft); font-size:1rem; margin-top:22px; max-width:46ch; }
+  .final-cta-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .final-cta .btn-primary{ background:var(--on-walnut); border-color:var(--on-walnut); color:var(--walnut); }
+  .final-cta .btn-primary:hover{ background:transparent; border-color:var(--on-walnut); color:var(--on-walnut); }
+  .final-cta .btn-ghost{ color:var(--on-walnut); border-color:rgba(239,233,220,.5); }
+  .final-cta .btn-ghost:hover{ background:var(--on-walnut); border-color:var(--on-walnut); color:var(--walnut); }
+  @media (min-width:900px){
+    .final-cta-inner{ grid-template-columns:minmax(0,7fr) minmax(0,5fr); column-gap:var(--col-gap); }
+    .final-cta-actions{ justify-content:flex-end; padding-bottom:6px; }
+  }
+
+  footer{ padding:0 0 28px; border-top:1px solid var(--line-on-walnut); }
+  .final-cta + footer{ border-top:1px solid var(--line-on-walnut); }
+  .footer-grid{
+    display:grid; gap:44px 32px; grid-template-columns:1fr 1fr; padding:clamp(52px,6vw,80px) 0 clamp(40px,4vw,64px);
+  }
+  .footer-grid > div:first-child{ grid-column:1 / -1; }
+  @media (min-width:900px){
+    .footer-grid{ grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr)); gap:48px var(--col-gap); }
+    .footer-grid > div:first-child{ grid-column:auto; }
+  }
+  @media (max-width:420px){ .footer-grid{ grid-template-columns:1fr; } }
+  footer .fbrand{ font-family:var(--serif); font-size:2.1rem; font-weight:300; line-height:1; margin-bottom:14px; }
+  footer p{ color:var(--on-walnut-soft); font-size:.95rem; max-width:34ch; }
+  footer .footer-h{
+    margin:0 0 18px; font-family:var(--sans); font-size:.9rem; font-weight:500;
+    letter-spacing:.02em; color:var(--on-walnut-faint);
+  }
+  footer ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  footer li{ color:var(--on-walnut-soft); font-size:.92rem; line-height:1.55; }
+  footer a{ color:var(--on-walnut-soft); text-decoration:none; font-size:.92rem; background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat; transition:background-size .4s ease, color .25s ease; padding-bottom:1px; }
+  footer a:hover{ color:var(--on-walnut); background-size:100% 1px; }
+  .footer-social{ list-style:none; margin:18px 0 0; padding:0; display:flex; gap:18px; flex-direction:row; }
+  .footer-bottom{
+    padding-top:18px; border-top:1px solid var(--line-on-walnut);
+    font-size:.8125rem; color:var(--on-walnut-faint);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px 28px;
+  }
+  .footer-bottom a, .footer-link-btn{ font-size:.8125rem; color:var(--on-walnut-faint); text-decoration:underline; text-underline-offset:3px; background:none; }
+  .footer-bottom a:hover, .footer-link-btn:hover{ color:var(--on-walnut); }
+  .footer-link-btn{ border:0; padding:0; margin:0; font-family:inherit; cursor:pointer; }
+  @media (max-width:899px), (pointer:coarse){
+    footer ul{ gap:0; }
+    footer li a, .footer-bottom a, .footer-link-btn{ display:inline-flex; align-items:center; min-height:44px; padding-block:0; }
+    footer li a, .footer-bottom a, .footer-link-btn{ position:relative; }
+    footer li a::after, .footer-bottom a::after, .footer-link-btn::after{ content:""; position:absolute; inset:0 -10px; }
+    .footer-social a{ min-width:44px; justify-content:center; }
+    .footer-bottom{ gap:0 28px; }
+  }
+  @media (max-width:639px){ .footer-bottom{ flex-direction:column; align-items:flex-start; gap:0; } .footer-bottom > span:first-child, .footer-bottom > span:last-child{ padding-block:6px; } }
+  main:focus, [tabindex="-1"]:focus{ outline:none; }
+  
+  .legal{ max-width:800px; margin:0 auto; padding:clamp(56px,7vw,112px) var(--gutter) clamp(72px,8vw,128px); }
+  .legal h1{ font-size:clamp(2.8rem,1.6rem + 4vw,4.6rem); line-height:1; letter-spacing:-.028em; margin-bottom:18px; }
+  .legal .meta{ color:var(--ink-faint); font-size:.95rem; margin-bottom:44px; }
+  .legal .summary{ padding:26px 30px; border-left:2px solid var(--clay-deep); background:rgba(var(--clay-tint),.08); margin-bottom:56px; }
+  .legal .summary p{ color:var(--ink); font-size:1.06rem; line-height:1.7; }
+  .legal h2{ font-size:clamp(1.7rem,1.3rem + 1.2vw,2.2rem); line-height:1.15; margin:60px 0 16px; scroll-margin-top:calc(var(--nav-h) + 24px); }
+  .legal p, .legal li{ color:var(--ink-soft); font-size:1.03rem; line-height:1.78; }
+  .legal p + p{ margin-top:16px; }
+  .legal ul{ padding-left:1.25rem; margin:16px 0 0; }
+  .legal li + li{ margin-top:14px; }
+  .legal a{ color:var(--clay-deep); text-underline-offset:3px; text-decoration-thickness:1px; }
+  .legal strong{ color:var(--ink); font-weight:500; }
+  .legal code{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.88em; background:rgba(var(--clay-tint),.13); padding:2px 6px; }
+  .legal .btn{ margin-top:8px; }
+  #analyticsMsg{ margin-top:14px; font-size:.97rem; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="brand-name">Interior Centre</span><small>Design &amp; contracting · Mymensingh</small></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#work">Our Work</a></li>
+      <li><a href="index.html#location">Location</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+8801790392377" class="nav-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span class="call-text">+880 1790-392377</span></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#work">Our Work</a>
+    <a href="index.html#location">Location</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="tel:+8801790392377" class="mp-call">Call +880 1790-392377</a>
+  </nav>
+</header>
+<main id="main-content">
+<article class="legal">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 10 October 2026</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> this website has no accounts, no sign-up and no database. It doesn&rsquo;t collect your name or phone number itself. If you use the contact form, it prepares a WhatsApp message on your own device &mdash; nothing is sent until you press Send in WhatsApp. Optional analytics only run if you accept them.</p>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>This website belongs to Interior Centre, an interior design and contracting service at 21, Jubilee Ghat (opposite Bipin Park), Mymensingh 2200, Bangladesh. You can reach us on <a href="tel:+8801790392377">+880 1790-392377</a> (call or WhatsApp). In this policy, &ldquo;we&rdquo; means Interior Centre.</p>
+
+  <h2>Information you give us</h2>
+  <p><strong>The contact form.</strong> The form asks for your name, phone number, project type and a message. These details are not sent to this website or stored on it. When you press &ldquo;Send message&rdquo;, your browser builds a pre-filled WhatsApp message and opens WhatsApp (a <code>wa.me</code> link). The message only reaches us if you then press Send in WhatsApp. Once you do, it is handled by WhatsApp, which is operated by a third party (Meta) and has its own privacy policy.</p>
+  <p><strong>Calls and WhatsApp.</strong> If you phone or message us directly, we see your phone number and anything you tell us.</p>
+  <p><strong>How we use it.</strong> To reply to your enquiry and discuss your project. We don&rsquo;t sell your information and we don&rsquo;t use it for advertising.</p>
+
+  <h2>Information collected automatically</h2>
+  <ul>
+    <li><strong>Hosting.</strong> The site is delivered by a hosting provider, which may record standard technical data such as your IP address, browser type, the pages requested and the time. We don&rsquo;t use this to identify visitors.</li>
+    <li><strong>Google Fonts.</strong> The pages load their fonts from Google Fonts, so your browser contacts Google&rsquo;s servers (fonts.googleapis.com and fonts.gstatic.com) when a page opens. Google receives your IP address and browser details as part of that request.</li>
+    <li><strong>Google Maps.</strong> The site only contains links to Google Maps; no map is embedded. Nothing is sent to Google Maps unless you click one of those links, after which Google&rsquo;s own privacy policy applies.</li>
+    <li><strong>Cookies.</strong> The site itself does not set cookies. If you accept analytics (see below), Google Analytics sets its own cookies.</li>
+    <li><strong>Browser storage.</strong> Your browser may keep (a) your analytics choice, only if analytics is switched on for this site, and (b) a short-lived note, for the length of your visit, of when you last prepared a contact-form message, so the form can&rsquo;t be sent repeatedly by accident. Site editors&rsquo; browsers also keep an unpublished draft of their edits. None of this is sent to us.</li>
+  </ul>
+
+  <h2 id="analytics">Analytics (Google Analytics 4)</h2>
+  <div id="analyticsOff">
+    <p>Analytics is not switched on for this website at the moment, so no analytics cookies are set and no analytics data is collected.</p>
+  </div>
+  <div id="analyticsOn" hidden>
+    <p>This website can use Google Analytics 4 to count visits and see which parts of the site and which buttons (call, WhatsApp, Google Maps, form) are used. It <strong>only loads after you click &ldquo;Accept&rdquo;</strong> on the cookie banner. If you click &ldquo;Decline&rdquo;, or don&rsquo;t answer, nothing from Google Analytics is loaded.</p>
+    <p>If you accept, Google receives information such as the pages you view, the buttons you click, your approximate location, and your device and browser type, and sets the cookies <code>_ga</code> and <code>_ga_&lt;ID&gt;</code>. We have turned off Google signals and ad personalisation. We don&rsquo;t send what you type into the contact form to analytics &mdash; only that a message was prepared, and the project type you chose. Google says Analytics 4 doesn&rsquo;t log or store individual IP addresses. The data is processed by Google under its own privacy policy.</p>
+    <p>You can change your mind at any time: use the &ldquo;Cookie settings&rdquo; link at the bottom of the home page, or turn analytics off in this browser here:</p>
+    <button type="button" class="btn btn-ghost" id="analyticsOffBtn">Turn analytics off</button>
+    <p id="analyticsMsg" role="status" aria-live="polite"></p>
+  </div>
+
+  <h2>Who we share information with</h2>
+  <p>Only the services described above: WhatsApp (when you send us a message there), Google (fonts, and analytics if you accept it) and our hosting provider. We don&rsquo;t sell or rent your information. We may disclose information if the law requires it.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>You can use the site without giving us any information; calling us is always an option.</li>
+    <li>You can decline analytics, or withdraw your choice later, as described above. Clearing your browser&rsquo;s site data also removes anything stored in your browser.</li>
+    <li>If you&rsquo;d like to know what messages we hold from you, or want them deleted, contact us using the details below and we&rsquo;ll look at your request. Depending on where you live, you may have additional rights under local law.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>This website is meant for people planning interior projects and isn&rsquo;t directed at children.</p>
+
+  <h2>Security</h2>
+  <p>The site is served over HTTPS. No website or messaging service can be guaranteed completely secure, so please don&rsquo;t include sensitive information such as financial details in your messages.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we change how the website handles information, we&rsquo;ll update this page and its &ldquo;Last updated&rdquo; date.</p>
+
+  <h2>Contact</h2>
+  <p>Interior Centre<br>21, Jubilee Ghat (opposite Bipin Park), Mymensingh 2200, Bangladesh<br>Phone / WhatsApp: <a href="tel:+8801790392377">+880 1790-392377</a></p>
+  <p><a href="index.html#contact">Contact us</a> &middot; <a href="index.html#faq">Read the FAQ</a> &middot; <a href="index.html">Back to the home page</a></p>
+</article>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="fbrand">Interior Centre</div>
+        <p>Interior design &amp; contracting service.</p>
+      </div>
+      <div>
+        <p class="footer-h">Contact</p>
+        <ul>
+          <li>21, Jubilee Ghat, opposite Bipin Park</li>
+          <li>Mymensingh 2200, Bangladesh</li>
+          <li><a href="tel:+8801790392377">+880 1790-392377</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">Navigate</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#work">Our Work</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-h">Hours</p>
+        <ul>
+          <li>Mon – Thu: 9 AM – 9 PM</li>
+          <li>Fri: Closed</li>
+          <li>Sat: 9 AM – 9 PM</li>
+          <li>Sun: 9:30 AM – 9 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Interior Centre. All rights reserved.</span>
+      <span>Mymensingh, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+<script>
+if(location.protocol==='http:'&&!/^(localhost|127(\.\d+){3}|\[::1\]|0\.0\.0\.0)$/.test(location.hostname)){location.replace('https://'+location.host+location.pathname+location.search+location.hash);}
+(function(){var n=document.getElementById('siteNav'),b=document.getElementById('hamburgerBtn');if(!n||!b)return;function s(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Close menu':'Open menu');}b.addEventListener('click',function(){s(!n.classList.contains('open'));});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){s(false);b.focus();}});})();
+(function(){
+var m=document.querySelector('meta[name="ga-measurement-id"]');
+var id=m?(m.getAttribute('content')||'').trim():'';
+var on=/^G-[A-Z0-9]{6,12}$/.test(id)&&!/^G-X+$/.test(id);
+var box=document.getElementById('analyticsOn'),off=document.getElementById('analyticsOff');
+if(box)box.hidden=!on;if(off)off.hidden=on;
+var btn=document.getElementById('analyticsOffBtn'),msg=document.getElementById('analyticsMsg');
+if(btn)btn.addEventListener('click',function(){
+try{localStorage.setItem('ic_analytics_consent_v1','denied');}catch(e){}
+var h=location.hostname,p=h.split('.'),d=['',h,'.'+h];if(p.length>2)d.push('.'+p.slice(-2).join('.'));
+document.cookie.split(';').forEach(function(c){var k=c.split('=')[0].trim();if(k==='_ga'||k==='_gid'||k.indexOf('_ga_')===0){d.forEach(function(x){document.cookie=k+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'+(x?'; domain='+x:'');});}});
+if(msg)msg.textContent='Done — analytics is turned off in this browser and any analytics cookies have been cleared.';
+});
+})();
+</script>
+</body>
+</html>
